@@ -11,6 +11,9 @@ Yeah it may look like a lot of directories but hear me out.
 
 ### The Vendor Directory
 ### The Settings Directory
+
+This directory is mainly for variables. 
+
 ### The Tools Directory
 
 This directory is a place for your mixins and functions to live. As of this writing, there are two mixins included: Respond-to and Transition. See the _mixins.scss partial for details. Respond-to is a really brilliant and wonderful mixin available for handling responsive styles. It is a mobile-first (ie it compiles as a `min-width` declaration) media query mixin. Please use it to keep things consistent. Custom breakpoints can be added/subtracted from the breakpoints map as needed but keeping your breakpoints to a minimum is good for your theme. Use respond-to to keep things clean and consistent. This layer does not output CSS.
