@@ -1,0 +1,113 @@
+/* Form Elements */
+
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"] {
+  &:focus {
+
+  }
+}
+
+input[type="submit"] {
+  &:hover {
+
+  }
+}
+
+label {
+
+}
+
+/* Checkboxes -- CSS Style overrides to default browser styles.*/
+input[type="checkbox"] { 
+  /* hides default checkbox */
+  position: absolute; 
+  opacity: 0; 
+  z-index: -1; 
+}
+
+// For the text. 
+input[type="checkbox"]+span { 
+  cursor: pointer;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+input[type="checkbox"]+span:before { 
+  content: '\f0c8'; // open rounded square 
+  display: inline-block;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400;
+  padding: 2px 0 0 3px; 
+  margin-right: 0.5em; 
+  color: $brand-secondary;
+}
+
+input[type="checkbox"]:checked+span:before { 
+  content: '\f14a'; // filled checkbox 
+  font-weight: 900;
+}
+
+// Focus state.
+input[type="checkbox"]:focus+span { 
+  border-bottom: 2px solid $brand-secondary;
+  outline: none;
+}
+
+// Disabled option.
+input[type="checkbox"]:disabled+span { 
+  color: $rule-gray; 
+  &::before {
+    color: $rule-gray; 
+  }
+}
+
+/* Radio Buttons -- CSS Style overrides to browser defaults. */
+.radios {
+  label {
+    display: block;
+  }
+}
+
+// Hides default radio.
+input[type="radio"] { 
+  position: absolute; 
+  opacity: 0; 
+  z-index: -1; 
+}
+
+// For the text.
+input[type="radio"]+span { 
+  cursor: pointer;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+input[type="radio"]+span:before { 
+  content: '\f111'; // open circle 
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400;
+  padding: 2px 0 0 3px; 
+  margin-right: 0.5em; 
+  color: $brand-secondary;
+}
+
+input[type="radio"]:checked+span:before { 
+  content: '\f192'; // dot-circle 
+  font-weight: 900;
+}
+
+// Focus state.
+input[type="radio"]:focus+span { 
+  border-bottom: 2px solid $brand-secondary;
+  outline: none;
+}
+
+// Disabled option.
+input[type="radio"]:disabled+span { 
+  color: $rule-gray; 
+  &::before {
+    color: $rule-gray; 
+  }
+}
