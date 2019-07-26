@@ -3,8 +3,10 @@
 * For the smallest building blocks of your site, ie headings, links, lists, buttons.
 */
 
-@import 'text';
-@import 'lists';
-@import 'links';
 @import 'buttons';
+@import 'content-regions';
 @import 'form-elements';
+@import 'links';
+@import 'lists';
+@import 'table-elements';
+@import 'text';
