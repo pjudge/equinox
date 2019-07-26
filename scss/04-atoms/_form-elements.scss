@@ -41,7 +41,7 @@ input[type="checkbox"]+span:before {
   font-weight: 400;
   padding: 2px 0 0 3px; 
   margin-right: 0.5em; 
-  color: $brand-secondary;
+  color: $brand-primary;
 }
 
 input[type="checkbox"]:checked+span:before { 
@@ -51,15 +51,15 @@ input[type="checkbox"]:checked+span:before {
 
 // Focus state.
 input[type="checkbox"]:focus+span { 
-  border-bottom: 2px solid $brand-secondary;
+  border-bottom: 2px solid $brand-primary;
   outline: none;
 }
 
 // Disabled option.
 input[type="checkbox"]:disabled+span { 
-  color: $rule-gray; 
+  color: $gray; 
   &::before {
-    color: $rule-gray; 
+    color: $gray; 
   }
 }
 
@@ -90,7 +90,7 @@ input[type="radio"]+span:before {
   font-weight: 400;
   padding: 2px 0 0 3px; 
   margin-right: 0.5em; 
-  color: $brand-secondary;
+  color: $brand-primary;
 }
 
 input[type="radio"]:checked+span:before { 
@@ -100,14 +100,14 @@ input[type="radio"]:checked+span:before {
 
 // Focus state.
 input[type="radio"]:focus+span { 
-  border-bottom: 2px solid $brand-secondary;
+  border-bottom: 2px solid $brand-primary;
   outline: none;
 }
 
 // Disabled option.
 input[type="radio"]:disabled+span { 
-  color: $rule-gray; 
+  color: $gray; 
   &::before {
-    color: $rule-gray; 
+    color: $gray; 
   }
 }

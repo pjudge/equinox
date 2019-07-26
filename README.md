@@ -42,7 +42,7 @@ This directory is mainly for Helper class. This is the last layer of the inverte
 ## Compiling
 ==================================================
 
-This theme is currently meant to be compiled using [Prepros](https://prepros.io/). You will want to make sure the Autoprefixer option is turned ON. 
+This theme is currently meant to be compiled using [Prepros](https://prepros.io/). You will want to make sure the Autoprefixer option is turned ON. You will want to make sure the Autocompiler option is turned OFF. The best way to compile this theme with Prepros is to select /scss/styles.scss in Prepros and click "Process file" when you're ready to compile. You can change any partial you'd like, you only need to compile ONE file and that is /scss/styles.scss. It will output to /css/styles.css.
 
 
 ==================================================
