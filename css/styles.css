@@ -3474,7 +3474,7 @@ input[type="checkbox"] + span {
   margin-bottom: 0.2em; }
 
 input[type="checkbox"] + span:before {
-  content: '\f0c8';
+  content: "\f0c8";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
@@ -3483,7 +3483,7 @@ input[type="checkbox"] + span:before {
   color: #2b74a2; }
 
 input[type="checkbox"]:checked + span:before {
-  content: '\f14a';
+  content: "\f14a";
   font-weight: 900; }
 
 input[type="checkbox"]:focus + span {
@@ -3510,7 +3510,7 @@ input[type="radio"] + span {
   margin-bottom: 0.2em; }
 
 input[type="radio"] + span:before {
-  content: '\f111';
+  content: "\f111";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   padding: 2px 0 0 3px;
@@ -3518,7 +3518,7 @@ input[type="radio"] + span:before {
   color: #2b74a2; }
 
 input[type="radio"]:checked + span:before {
-  content: '\f192';
+  content: "\f192";
   font-weight: 900; }
 
 input[type="radio"]:focus + span {
@@ -3557,7 +3557,7 @@ input[type="radio"]:disabled + span {
 .down-arrow {
   position: relative; }
   .down-arrow::after {
-    content: '\f107';
+    content: "\f107";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     position: absolute;
@@ -3566,7 +3566,7 @@ input[type="radio"]:disabled + span {
     pointer-events: none; }
 
 .right-arrow::after {
-  content: '\f061';
+  content: "\f061";
   font-family: "Font Awesome 5 Free";
   font-weight: 900; }
 

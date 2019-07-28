@@ -35,7 +35,7 @@ input[type="checkbox"]+span {
 }
 
 input[type="checkbox"]+span:before { 
-  content: '\f0c8'; // open rounded square 
+  content: "\f0c8"; // open rounded square 
   display: inline-block;
   font-family: "Font Awesome 5 Free"; 
   font-weight: 400;
@@ -45,7 +45,7 @@ input[type="checkbox"]+span:before {
 }
 
 input[type="checkbox"]:checked+span:before { 
-  content: '\f14a'; // filled checkbox 
+  content: "\f14a"; // filled checkbox 
   font-weight: 900;
 }
 
@@ -85,7 +85,7 @@ input[type="radio"]+span {
 }
 
 input[type="radio"]+span:before { 
-  content: '\f111'; // open circle 
+  content: "\f111"; // open circle 
   font-family: "Font Awesome 5 Free"; 
   font-weight: 400;
   padding: 2px 0 0 3px; 
@@ -94,7 +94,7 @@ input[type="radio"]+span:before {
 }
 
 input[type="radio"]:checked+span:before { 
-  content: '\f192'; // dot-circle 
+  content: "\f192"; // dot-circle 
   font-weight: 900;
 }
 
