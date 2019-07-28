@@ -1,6 +1,9 @@
 name: Equinox
 type: theme
 description: 'A componentized D8 theme.'
+package: Custom
+type: theme
+version: 1.0
 core: 8.x
 libraries:
   - equinox/global-styling
