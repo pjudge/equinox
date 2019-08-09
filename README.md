@@ -9,9 +9,8 @@ Equinox is Drupal 8 theme created to make your life as a themer easier. It is ba
 If you're familiar with ITCSS and Atomic Design, you will notice that the directory structure is basically a mash-up of those two ideas. 
 
 
-==================================================
+_____________________________
 ## Structure
-==================================================
 
 Yeah it may look like a lot of directories but hear me out.
 
@@ -50,16 +49,20 @@ As with Molecules, you'll likely have very little aesthetic CSS here, and more l
 This directory is mainly for Helper classes. This is the last layer of the inverted triangle and thus this code is meant to override previously defined styles. The hope is that with using this architecture, you will end up with a theme that is componentized, easily portable, flexible (ie not brittle), and shouldn't require much, if at all, usage of the !important tag.
 
 
-==================================================
+_____________________________
 ## Compiling
-==================================================
 
 This theme is currently meant to be compiled using [Prepros](https://prepros.io/). Prepros config is included here but just fyi: you will want to make sure the Autoprefixer option is turned ON. You will want to make sure the Autocompiler option is turned OFF. The best way to compile this theme with Prepros is to select /scss/styles.scss in Prepros and click "Process file" when you're ready to compile. You can change any partial you'd like, you only need to compile ONE file and that is /scss/styles.scss. It will output to /css/styles.css.
 
 
-==================================================
+_____________________________
+## Composer
+
+This theme includes a composer.json file such that it can be installed into a composerized D8 project as a custom theme. 
+
+
+_____________________________
 ## Notes
-==================================================
 
 ### Syntax and keeping things clean
 
@@ -88,13 +91,12 @@ This theme is meant to (mostly) follow Drupal's CSS coding standards found here:
 I consider this theme to be a living entity in and of itself. It should be updated, maintained, pruned, improved, etc. over time, by the people who use it in the real world. 
 
 
-==================================================
+_____________________________
 ## What's in The Future for Equinox?
-==================================================
 
 ### Gulp
 
-It wouldn't take much to set up Gulp to compile the SCSS in this theme. As of this writing however, the company this theme was built for is using Prepros for all our compiling needs and as such, this theme is not NPM-enabled. It could be useful in the future as we have included Bootstrap (grid-only) and will be using Font Awesome.
+It wouldn't take much to set up Gulp to compile the SCSS in this theme. As of this writing however, the company this theme was built for is using Prepros for all our compiling needs and as such, this theme is not NPM-enabled.
 
 ### Parker
 

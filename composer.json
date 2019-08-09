@@ -1,0 +1,18 @@
+{
+  "name": "iq/equinox",
+  "description": "Provides a custom, componentized D8 theme",
+  "type": "drupal-custom-theme",
+  "keywords": ["Drupal"],
+  "homepage": "https://github.com/IQ-Solutions/equinox",
+  "authors": [
+    {
+      "name": "Pauline Judge",
+      "role": "Maintainer",
+      "email": "paulinejudge@iqsolutions.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/IQ-Solutions/equinox/issues",
+    "source": "https://github.com/IQ-Solutions/equinox"
+  }
+}
