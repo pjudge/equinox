@@ -1,4 +1,4 @@
-# Welcome to Equinox! - last updated: July 2019
+# Welcome to Equinox! - last updated: August 2019
 
 Equinox is Drupal 8 theme created to make your life as a themer easier. It is based on a few pretty cool ideas that some smart people have had:
 
