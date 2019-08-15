@@ -1,4 +1,4 @@
-# Welcome to Equinox! - last updated: August 2019
+# Welcome to Equinox! - last updated: August 15, 2019
 
 Equinox is Drupal 8 theme created to make your life as a themer easier. It is based on a few pretty cool ideas that some smart people have had:
 
@@ -77,7 +77,7 @@ This theme is meant to (mostly) follow Drupal's CSS coding standards found here:
 + There is an 80 character limit per line. 
 
 + Use double quotes, no single quotes (except where necessary for SASS syntax).
-
+ 
 + Do not attach a unit to a zero value (ie, use `padding: 0 0 10em 3em` instead of `padding: 0em 0em 10em 3em`).
 
 + Use shorthand for padding and margin whenever possible.
@@ -85,6 +85,10 @@ This theme is meant to (mostly) follow Drupal's CSS coding standards found here:
 + Pseudo-element definitions should use two colons (`::before`, `::after`) .
 
 + Pseudo-classes should use one colon (`:focus`, `:hover`) .
+
+### Theme dependencies...
+
+It is expected that the themers will need some additional third-party code while fleshing out their theme. Namely, Bootstrap (grid-only) and FontAwesome. These libraries should be added to the larger Drupal project via Composer and/or Bower/NPM. For the most part, Equinox is plug-n-play but if you'd like to add something like Bootstrap and FontAwesome, you'll need to update `equinox.libraries.yml` and `equinox.info.yml` so that your project knows where to find that code. 
 
 ### This theme is alive.
 
@@ -96,7 +100,14 @@ _____________________________
 
 ### Gulp
 
-It wouldn't take much to set up Gulp to compile the SCSS in this theme. As of this writing however, the company this theme was built for is using Prepros for all our compiling needs and as such, this theme is not NPM-enabled.
+There is now a gulpfile included in this theme however NPM installs would need to be run in order to use it, namely: gulp, gulp-sass, sourcemaps, and autoprefixer. [This article](https://css-tricks.com/gulp-for-beginners/) walks you through how to ensure you have node.js and NPM installed on your machine so that you can use these commands. Then the following commands would need to be run within the theme directory:
+
++ `npm install gulp --save-dev`
++ `npm install gulp-sass --save-dev`
++ `npm install sourcemaps --save-dev`
++ `npm install autoprefixer --save-dev`
+
+As of this writing however, the company this theme was built for is using Prepros for all our compiling needs and as such, this theme is not NPM-enabled. The gulpfile is provided for potential future use. Node_modules directory has been added to `.gitignore`.
 
 ### Parker
 
