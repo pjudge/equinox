@@ -1,6 +1,6 @@
 # Welcome to Equinox! - last updated: September 13, 2019
 
-Equinox is a Drupal 8 base theme meant to provide very basic styles and basic page layout for your new Drupal project. It is meant to be used as a base from which to extend [the sub-theme Solstice](https://github.com/IQ-Solutions/solstice). 
+Equinox is a Drupal 8 base theme meant to provide very basic styles and basic page layout for your new Drupal project. It is meant to be used as a base from which to extend [the sub-theme Solstice](https://github.com/pjudge/solstice). 
 
 
 ## Dependencies
@@ -12,7 +12,7 @@ This theme, when extended by Solstice, requires that the [Component Libraries](h
 
 ## Usage
 
-From within your Drupal project root (or whatever directory your `composer.json` file lives in), run `composer require iq/equinox` to install in `themes/custom`. Use alone or, ideally, [download Solstice](https://github.com/IQ-Solutions/solstice) as your sub-theme and do all your theming in there in a componentized environment.
+From within your Drupal project root (or whatever directory your `composer.json` file lives in), run `composer require iq/equinox` to install in `themes/custom`. Use alone or, ideally, [download Solstice](https://github.com/pjudge/solstice) as your sub-theme and do all your theming in there in a componentized environment.
 
 These are the regions that Equinox ships with:
 * Top Bar 
