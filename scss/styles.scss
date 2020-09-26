@@ -1,7 +1,9 @@
-@import '01-settings/settings';
-@import '02-tools/tools';
-@import '03-generic/generic';
-@import '04-atoms/atoms';
-@import '05-molecules/molecules';
-@import '06-organisms/organisms';
-@import '07-utilities/utilities';
+@import '01-eq-reset';
+@import '02-eq-mixins';
+@import '03-eq-variables';
+@import '04-eq-admin';
+@import '05-eq-atoms';
+@import '06-eq-molecules';
+@import '07-eq-organisms';
+@import '08-eq-layout';
+@import '09-eq-helpers';

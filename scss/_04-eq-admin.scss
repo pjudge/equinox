@@ -1,0 +1,51 @@
+/* Admin - styles to touch up the admin side of the theme. */
+
+// Task Tabs.
+.task-tabs {
+  padding: 0 0 0.3em;
+  border-bottom: 3px solid $eq-medium-gray;
+  ul {
+    li {
+      display: inline-block;
+      padding: 1em 0 0;
+      a {
+        color: black;
+        padding: 0.5em;
+        border: 1px solid $eq-medium-gray;
+        text-decoration: none;
+        font-weight: 400;
+        &:hover {
+          background-color: $eq-medium-gray;
+          @include transition(background-color, 0.3s, ease);
+        }
+      }
+    }
+  }
+}
+
+// Drupal Admin Alerts.
+.admin-alert,
+.admin-status,
+.admin-error {
+  padding: 0.5em 1em;
+  background-color: white;
+  margin: 1em 2em;
+  ul {
+    padding: 0 1em;
+  }
+}
+
+.admin-alert {
+  border: 1px solid $eq-admin-yellow;
+  box-shadow: 1px 1px 5px $eq-admin-yellow;
+}
+
+.admin-status {
+  border: 1px solid $eq-admin-green;
+  box-shadow: 1px 1px 5px $eq-admin-green;
+}
+
+.admin-error {
+  border: 1px solid $eq-admin-red;
+  box-shadow: 1px 1px 5px $eq-admin-red;
+}

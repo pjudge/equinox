@@ -1,30 +1,33 @@
-/**
-* SETTINGS
-* For variables.
-*/
-/* Breakpoints */
-/* Colors */
-/* Fonts */
-/**
-* TOOLS
-* For globally used mixins and functions.
-*/
-/* Mixins */
-/** 
-* Respond To - Mixin to manage responsive breakpoints
-* https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
-*	Usage:  @include respond-to('s') {}
-* @author Hugo Giraudel
-*/
-/** 
-* CSS Transition
-*	Usage: @include transition(width, 0.3s, ease-out);
-*/
-/**
-* GENERIC
-* For getting things ready, ie normalize, reset. This is the first layer that generates CSS.
-*/
-/* Normalize CSS */
+/* Resets */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    padding: 0;
+    margin: 0; }
+
+ol {
+  padding: 0;
+  margin: 0; }
+  ol li {
+    padding: 0;
+    margin: 0; }
+
+/* NORMALIZE.CSS */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -337,177 +340,221 @@ template {
 [hidden] {
   display: none; }
 
-/* Resets */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.5;
-  color: #3d3d3d; }
-
-p {
-  margin: 0;
-  padding: 0; }
-
-img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-ul {
-  padding: 0;
-  margin: 0; }
-  ul li {
-    padding: 0;
-    margin: 0; }
-
-/* Admin - some nice touches to the admin side of the theme. */
-#block-equinox-local-tasks {
-  margin: 1em;
-  padding: 0.3em 1em;
-  border-bottom: 3px solid #c0c0c0; }
-  #block-equinox-local-tasks ul li {
-    display: inline-block; }
-    #block-equinox-local-tasks ul li a {
+/* Mixins */
+/** 
+* Respond To - Mixin to manage responsive breakpoints
+* https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+*	Usage:  @include respond-to('s') {}
+* @author Hugo Giraudel
+*/
+/** 
+* CSS Transition
+*	Usage: @include transition(width, 0.3s, ease-out);
+*/
+/* Admin - styles to touch up the admin side of the theme. */
+.task-tabs {
+  padding: 0 0 0.3em;
+  border-bottom: 3px solid #999999; }
+  .task-tabs ul li {
+    display: inline-block;
+    padding: 1em 0 0; }
+    .task-tabs ul li a {
       color: black;
       padding: 0.5em;
-      border: 1px solid #c0c0c0;
-      text-decoration: none; }
-      #block-equinox-local-tasks ul li a:hover {
-        color: white;
-        background-color: #c0c0c0;
+      border: 1px solid #999999;
+      text-decoration: none;
+      font-weight: 400; }
+      .task-tabs ul li a:hover {
+        background-color: #999999;
         -webkit-transition: background-color 0.3s ease;
         -moz-transition: background-color 0.3s ease;
         -ms-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease; }
 
+.admin-alert,
+.admin-status,
+.admin-error {
+  padding: 0.5em 1em;
+  background-color: white;
+  margin: 1em 2em; }
+  .admin-alert ul,
+  .admin-status ul,
+  .admin-error ul {
+    padding: 0 1em; }
+
 .admin-alert {
-  padding: 1em;
-  background-color: #dbe4f0;
-  border: 1px solid;
-  margin: 1em 3em; }
+  border: 1px solid #dbc41d;
+  -webkit-box-shadow: 1px 1px 5px #dbc41d;
+  box-shadow: 1px 1px 5px #dbc41d; }
 
-/**
-* ATOMS
-* For the smallest building blocks of your site, ie headings, links, lists, buttons.
-*/
-/* Buttons */
-/* Content Regions */
-/* Form Elements */
-/* Checkboxes -- CSS Style overrides to default browser styles.*/
-input[type="checkbox"] {
-  /* hides default checkbox */
-  position: absolute;
-  opacity: 0;
-  z-index: -1; }
+.admin-status {
+  border: 1px solid #2ec400;
+  -webkit-box-shadow: 1px 1px 5px #2ec400;
+  box-shadow: 1px 1px 5px #2ec400; }
 
-input[type="checkbox"] + span {
-  cursor: pointer;
-  padding-bottom: 0.2em;
-  margin-bottom: 0.2em; }
+.admin-error {
+  border: 1px solid #c72d2d;
+  -webkit-box-shadow: 1px 1px 5px #c72d2d;
+  box-shadow: 1px 1px 5px #c72d2d; }
 
-input[type="checkbox"] + span:before {
-  content: "\f0c8";
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  padding: 2px 0 0 3px;
-  margin-right: 0.5em;
-  color: #2b74a2; }
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #829de0;
+  outline-offset: 0; }
 
-input[type="checkbox"]:checked + span:before {
-  content: "\f14a";
-  font-weight: 900; }
+input[type="submit"]:focus {
+  outline: 3px solid #829de0;
+  outline-offset: 0; }
 
-input[type="checkbox"]:focus + span {
-  border-bottom: 2px solid #2b74a2;
-  outline: none; }
+a:focus {
+  outline: 3px solid #829de0;
+  outline-offset: 0; }
 
-input[type="checkbox"]:disabled + span {
-  color: #c0c0c0; }
-  input[type="checkbox"]:disabled + span::before {
-    color: #c0c0c0; }
+button:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 3px solid #829de0;
+  outline-offset: 0; }
 
-/* Radio Buttons -- CSS Style overrides to browser defaults. */
-.radios label {
-  display: block; }
+/* Primary Menu */
+.primary-menu {
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999; }
+  .primary-menu .ul-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2em; }
+    .primary-menu .ul-menu .li-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch; }
+      .primary-menu .ul-menu .li-menu a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 1em 0.5em; }
+        .primary-menu .ul-menu .li-menu a:hover {
+          background-color: #d3d3d3; }
 
-input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  z-index: -1; }
+/* Breadcrumbs */
+.breadcrumb .ol-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none; }
+  .breadcrumb .ol-breadcrumb .li-breadcrumb {
+    padding: 0 1em 0 0; }
+    .breadcrumb .ol-breadcrumb .li-breadcrumb a {
+      padding: 0.3em; }
 
-input[type="radio"] + span {
-  cursor: pointer;
-  padding-bottom: 0.2em;
-  margin-bottom: 0.2em; }
+/* Footer Menu */
+.footer-menu ul {
+  list-style-type: none; }
 
-input[type="radio"] + span:before {
-  content: "\f111";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  padding: 2px 0 0 3px;
-  margin-right: 0.5em;
-  color: #2b74a2; }
+/* Search form */
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
-input[type="radio"]:checked + span:before {
-  content: "\f192";
-  font-weight: 900; }
+.search-form__button {
+  background-color: #111e6c;
+  padding-top: 0.3em;
+  margin-left: -3px;
+  cursor: pointer; }
+  .search-form__button svg {
+    height: 19px;
+    width: 25px;
+    fill: white; }
 
-input[type="radio"]:focus + span {
-  border-bottom: 2px solid #2b74a2;
-  outline: none; }
+/* Top Bar - usually contains gov and HHS links. */
+.top-bar {
+  background-color: #d3d3d3;
+  height: 30px; }
 
-input[type="radio"]:disabled + span {
-  color: #c0c0c0; }
-  input[type="radio"]:disabled + span::before {
-    color: #c0c0c0; }
+/* Equinox Base Header */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .header .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em; }
+    .header .header-wrapper .site-branding {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .header .header-wrapper .site-branding .logo {
+        max-width: 150px; }
+        .header .header-wrapper .site-branding .logo a {
+          display: block; }
 
-/* Links */
-/* Lists */
-/* Table Elements */
-/* Text */
-/**
-* MOLECULES
-* For medium-sized building blocks of your site, ie search form, simple blocks/cards.
-*/
-/* Forms */
-/* Menu */
-/* Tables */
-/** 
-* ORGANISMS
-* For larger building blocks of your site, ie header, footer. 
-*
-**/
-/* Footer */
-/* Header */
-/**
-* UTILITIES
-* For any styles that should override anything else in your theme. 
-*
-**/
+/* Equinox Base Footer */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #d3d3d3; }
+  .footer .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em; }
+
+/* Equinox Base Layout */
+/* Equinox Base Styles */
+.body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #3d3d3d; }
+
 /* Helpers */
-.down-arrow {
-  position: relative; }
-  .down-arrow::after {
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    right: 17px;
-    top: 8px;
-    pointer-events: none; }
-
-.right-arrow::after {
-  content: "\f061";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900; }
-
 .no-underline {
   text-decoration: none; }
   .no-underline:hover {
@@ -521,63 +568,8 @@ input[type="radio"]:disabled + span {
 .no-bullets {
   list-style-type: none; }
 
-.font-weight-400 {
-  font-weight: 400; }
-
 .no-padding {
   padding: 0; }
-
-.padding-1 {
-  padding: 1em; }
-
-.padding-tb-1 {
-  padding-top: 1em;
-  padding-bottom: 1em; }
-
-.padding-lr-1 {
-  padding-left: 1em;
-  padding-right: 1em; }
-
-.padding-top-1 {
-  padding-top: 1em; }
-
-.padding-bottom-1 {
-  padding-bottom: 1em; }
-
-.padding-right-1 {
-  padding-right: 1em; }
-
-.padding-left-1 {
-  padding-left: 1em; }
-
-.no-margin {
-  margin: 0; }
-
-.margin-1 {
-  margin: 1em; }
-
-.margin-1-1-0-0 {
-  margin: 1em 1em 0 0; }
-
-.margin-tb-1 {
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-.margin-lr-1 {
-  margin-left: 1em;
-  margin-right: 1em; }
-
-.margin-top-1 {
-  margin-top: 1em; }
-
-.margin-bottom-1 {
-  margin-bottom: 1em; }
-
-.margin-right-1 {
-  margin-right: 1em; }
-
-.margin-left-1 {
-  margin-left: 1em; }
 
 .display-block {
   display: block; }
@@ -586,53 +578,3 @@ input[type="radio"]:disabled + span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.flex-wrap-m {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  @media (min-width: 768px) {
-    .flex-wrap-m {
-      -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap; } }
-
-.flex-column-m {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  @media (min-width: 768px) {
-    .flex-column-m {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-
-.flex-column-s {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  @media (min-width: 576px) {
-    .flex-column-s {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-
-.flex-column-xs {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  @media (min-width: 450px) {
-    .flex-column-xs {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-
-.margin-right-1-s {
-  margin-right: 0; }
-  @media (min-width: 576px) {
-    .margin-right-1-s {
-      margin-right: 1em; } }

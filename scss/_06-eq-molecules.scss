@@ -1,0 +1,68 @@
+/* Primary Menu */
+.primary-menu {
+  border-top: 1px solid $eq-medium-gray;
+  border-bottom: 1px solid $eq-medium-gray;
+
+  // The unordered list in the primary menu.
+  .ul-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2em;
+
+    // The list items in primary menu.
+    .li-menu {
+      display: flex;
+      align-items: stretch;
+      a {
+        display: flex;
+        align-items: center;
+        padding: 1em 0.5em;
+        &:hover {
+          background-color: $eq-light-gray;
+        }
+      }
+    }
+  }
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  .ol-breadcrumb {
+    display: flex;
+    list-style-type: none;
+    .li-breadcrumb {
+      padding: 0 1em 0 0;
+      a {
+        padding: 0.3em;
+      }
+    }
+  }
+}
+
+/* Footer Menu */
+.footer-menu {
+  ul {
+    list-style-type: none;
+  }
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__button {
+  background-color: $eq-dark-blue;
+  padding-top: 0.3em;
+  margin-left: -3px;
+  cursor: pointer;
+  svg {
+    height: 19px;
+    width: 25px;
+    fill: white;
+  }
+}

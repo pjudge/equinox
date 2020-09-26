@@ -1,0 +1,33 @@
+/* Top Bar - usually contains gov and HHS links. */
+.top-bar {
+  background-color: $eq-light-gray;
+  height: 30px;
+}
+
+/* Equinox Base Header */
+.header {
+  display: flex;
+  justify-content: center;
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+/* Equinox Base Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $eq-light-gray;
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "iq/equinox",
-  "description": "Provides a custom, componentized D8 theme",
+  "description": "Provides a streamlined, componentized D8 theme",
   "type": "drupal-custom-theme",
   "keywords": ["Drupal"],
   "homepage": "https://github.com/IQ-Solutions/equinox",
@@ -14,5 +14,8 @@
   "support": {
     "issues": "https://github.com/IQ-Solutions/equinox/issues",
     "source": "https://github.com/IQ-Solutions/equinox"
+  },
+  "suggest": {
+    "drupal/components": "*"
   }
 }

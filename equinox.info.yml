@@ -1,17 +1,21 @@
 name: Equinox
 type: theme
-description: 'A componentized D8 theme.'
-package: Custom
+description: 'A base D8 theme.'
+logo: logo.png
 type: theme
-version: 1.0
+version: 1.0.0
 core: 8.x
 libraries:
   - equinox/global-styling
+  - equinox/global-js
 base theme: stable
 regions:
+  top_bar: 'Top Bar'
   header: Header
-  content: Content
-  footer: Footer
-regions-hidden:
+  primary_menu: 'Primary Menu'
+  breadcrumb: Breadcrumb
+  above_content: 'Above Content'
   sidebar_left: 'Sidebar Left'
+  content: Content
   sidebar_right: 'Sidebar Right'
+  footer: Footer

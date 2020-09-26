@@ -1,0 +1,34 @@
+// Form elements.
+textarea,
+input,
+select {
+  &:focus {
+    outline: 3px solid $eq-focus-blue;
+    outline-offset: 0;
+  }
+}
+
+input[type="submit"] {
+  &:focus {
+    outline: 3px solid $eq-focus-blue;
+    outline-offset: 0;
+  }
+}
+
+// Links.
+a {
+  &:focus {
+    outline: 3px solid $eq-focus-blue;
+    outline-offset: 0;
+  }
+}
+
+// Add focus for buttons, radios, checks.
+button,
+input[type="radio"],
+input[type="checkbox"] {
+  &:focus {
+    outline: 3px solid $eq-focus-blue;
+    outline-offset: 0;
+  }
+}

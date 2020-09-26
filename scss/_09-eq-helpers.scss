@@ -1,0 +1,53 @@
+/* Helpers */
+
+// Icons.
+// Down arrow for dropdowns -- this class must go on a div
+// wrapping the `select` element. You can't put pseudoelements on 
+// `select` directly. Only uncomment this if you're using FA.
+// .down-arrow {
+//   position: relative;
+//   &::after {
+//     content: "\f107";
+//     font-family: "Font Awesome 5 Free"; 
+//     font-weight: 900;
+//     position: absolute;
+//     right: 17px;
+//     top: 8px;
+//     pointer-events: none;
+//   }
+// }
+
+// Text.
+.no-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.only-hover-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Lists.
+// We might not want to remove all bullets from lists, so let's make a class.
+.no-bullets {
+  list-style-type: none;
+}
+
+// Padding.
+.no-padding {
+  padding: 0;
+}
+
+// Displays.
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
